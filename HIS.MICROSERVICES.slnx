@@ -3,5 +3,7 @@
   <Folder Name="/Services/">
     <Project Path="PatientAuthService/PatientAuthService.csproj" />
   </Folder>
-  <Folder Name="/Shared/" />
+  <Folder Name="/Shared/">
+    <Project Path="Shared.Authentication/Shared.Authentication.csproj" />
+  </Folder>
 </Solution>
