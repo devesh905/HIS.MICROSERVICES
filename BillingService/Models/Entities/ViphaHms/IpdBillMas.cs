@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace BillingService.Models.Entities.Hms;
+namespace BillingService.Models.Entities.ViphaHms;
 
 [Table("IPD_Bill_Mas", Schema = "dbo")]
 public class IpdBillMas
