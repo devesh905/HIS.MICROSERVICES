@@ -20,10 +20,4 @@
 	<ProjectReference Include="..\..\Shared\Shared.Authentication\Shared.Authentication.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\Entities\" />
-    <Folder Include="Models\DTOs\" />
-  </ItemGroup>
-
 </Project>
