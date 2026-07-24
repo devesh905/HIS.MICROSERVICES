@@ -2,6 +2,7 @@
   <Folder Name="/Gateway/" />
   <Folder Name="/Services/">
     <Project Path="PatientAuthService/PatientAuthService.csproj" />
+    <Project Path="BillService/BillService.csproj" />
   </Folder>
   <Folder Name="/Shared/">
     <Project Path="Shared.Authentication/Shared.Authentication.csproj" />
