@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/Gateway/" />
+  <Folder Name="/Services/">
+    <Project Path="PatientAuthService/PatientAuthService.csproj" />
+  </Folder>
+  <Folder Name="/Shared/" />
+</Solution>
