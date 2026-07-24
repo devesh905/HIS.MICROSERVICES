@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace BillingService.Models.Entities.Hms;
+namespace BillingService.Models.Entities.ViphaHms;
 
 [Table("Service_Master", Schema = "dbo")]
 public class ServiceMaster

@@ -1,4 +1,4 @@
-﻿using BillingService.Models.Entities.Hms;
+﻿using BillingService.Models.Entities.ViphaHms;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection.Emit;
 

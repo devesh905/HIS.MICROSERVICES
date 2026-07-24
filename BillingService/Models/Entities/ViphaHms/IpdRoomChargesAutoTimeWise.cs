@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace BillingService.Models.Entities.Hms;
+namespace BillingService.Models.Entities.ViphaHms;
 
 [Table("Ipd_Room_Charges_Auto_TimeWise", Schema = "dbo")]
 public class IpdRoomChargesAutoTimeWise
