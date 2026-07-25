@@ -2,7 +2,7 @@
 
 public static class HospitalRegistry
 {
-    public record HospitalEntry(string Key, string Name, string Vipha);
+    public record HospitalEntry(string Key, string Name, string ViphaCs);
 
     public static readonly IReadOnlyList<HospitalEntry> All =
     [
