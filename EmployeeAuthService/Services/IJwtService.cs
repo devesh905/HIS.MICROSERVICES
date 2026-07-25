@@ -1,6 +1,6 @@
 ﻿using EmployeeAuthService.Models.Entities.Vipha;
 
-namespace HIS.API.Services;
+namespace EmployeeAuthService.Services;
 
 public interface IJwtService
 {

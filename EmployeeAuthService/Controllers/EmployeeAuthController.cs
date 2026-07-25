@@ -218,7 +218,7 @@ public class EmployeeAuthController : ControllerBase
         var token = _jwt.GenerateEmployeeToken(user, entry.Key);
 
         var (ip, ua) = GetClientInfo();
-         _loginActivity.LogAsync(new Models.Entities.Portal.LoginActivityLog
+        await _loginActivity.LogAsync(new Models.Entities.Portal.LoginActivityLog
         {
             UserType = "Employee",
             UserName = userName,
