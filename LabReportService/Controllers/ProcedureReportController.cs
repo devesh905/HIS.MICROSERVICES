@@ -31,7 +31,7 @@ public class ProcedureReportController : ControllerBase
         if (entry == null)
             return BadRequest(new { message = $"Unknown hospital key: {hospitalKey}" });
 
-        await using var ctx = _hospitals.CreateHmsContext(entry.HisCs);
+        await using var ctx = _hospitals.CreateHmsContext(entry.HmsCs);
 
         var reports = await ctx.ProcedureReports
             .Where(r => r.UHIDNo == uhid && r.T_Status != "Cancelled")
@@ -74,7 +74,7 @@ public class ProcedureReportController : ControllerBase
 
         var uhidList = uhids.Split(',', StringSplitOptions.RemoveEmptyEntries).ToList();
 
-        await using var ctx = _hospitals.CreateHmsContext(entry.HisCs);
+        await using var ctx = _hospitals.CreateHmsContext(entry.HmsCs);
 
         var reports = await ctx.ProcedureReports
             .Where(r => uhidList.Contains(r.UHIDNo!) && r.T_Status != "Cancelled")
@@ -110,7 +110,7 @@ public class ProcedureReportController : ControllerBase
         if (entry == null)
             return BadRequest(new { message = $"Unknown hospital key: {hospitalKey}" });
 
-        await using var ctx = _hospitals.CreateHmsContext(entry.HisCs);
+        await using var ctx = _hospitals.CreateHmsContext(entry.HmsCs);
 
         var r = await ctx.ProcedureReports.FirstOrDefaultAsync(x => x.Id == id);
         if (r == null)
