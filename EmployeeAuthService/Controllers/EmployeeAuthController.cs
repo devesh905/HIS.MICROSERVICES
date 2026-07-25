@@ -45,7 +45,7 @@ public class EmployeeAuthController : ControllerBase
         var existsResults = await _hospitals.QueryAllViphaAsync(async (ctx, _) =>
             await ctx.Users.FirstOrDefaultAsync(u => u.UserName == userName && u.IsActive));
 
-        // Check: user exists but has no mobile
+        // user exists but has no mobile
         var userExistsNoMobile = existsResults.Any(r =>
             r.Result != null && string.IsNullOrWhiteSpace(r.Result.Mobile));
 
@@ -150,7 +150,7 @@ public class EmployeeAuthController : ControllerBase
             hr.Result.DateOfJoining,
         }).ToList();
 
-        // 4. Single hospital — skip selection, issue token immediately
+        // Single hospital — skip selection, issue token immediately
         if (allProfiles.Count == 1)
         {
             var profile = allProfiles[0];
@@ -181,7 +181,7 @@ public class EmployeeAuthController : ControllerBase
             });
         }
 
-        // 5. Found in MULTIPLE hospitals — let user pick which context to log into
+        // Found in MULTIPLE hospitals — let user pick which context to log into
         return Ok(new
         {
             requiresSelection = true,
