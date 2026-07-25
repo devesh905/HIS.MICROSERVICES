@@ -1,6 +1,6 @@
 ﻿namespace LabReportService.Data
 {
-    public class HmsDBContext
+    public class HmsDbContext
     {
     }
 }
