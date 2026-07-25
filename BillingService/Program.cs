@@ -1,5 +1,6 @@
-using Shared.Authentication;
 using BillingService.Services;
+using Microsoft.EntityFrameworkCore;
+using Shared.Authentication;
 
 var builder = WebApplication.CreateBuilder(args);
 
