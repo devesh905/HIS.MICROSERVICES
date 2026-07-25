@@ -22,7 +22,7 @@ builder.Services.AddScoped<IHospitalQueryService, HospitalQueryService>();
 builder.Services.AddScoped<IOtpService, OtpService>();
 builder.Services.AddScoped<IJwtService, JwtService>();
 builder.Services.AddScoped<ISmsService, AirtelSmsService>();
-builder.Services.AddSingleton<ILoginActivityService, LoginActivityService>();
+builder.Services.AddScoped<ILoginActivityService, LoginActivityService>();
 
 // JWT auth
 var jwtKey = builder.Configuration["Jwt:Key"]!;
