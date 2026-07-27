@@ -17,6 +17,18 @@ public class HospitalQueryService : IHospitalQueryService
         return new HmsDbContext(opts);
     }
 
-    public LisDbContext CreateLisContext(string csName) { /* same pattern */ }
-    public ViphaDbContext CreateViphaContext(string csName) { /* same pattern */ }
+    public LisDbContext CreateLisContext(string csName)
+    {
+        var cs = _config.GetConnectionString(csName)
+                 ?? throw new InvalidOperationException($"Connection string '{csName}' not found.");
+        var opts = new DbContextOptionsBuilder<LisDbContext>().UseSqlServer(cs).Options;
+        return new LisDbContext(opts);
+    }
+    public ViphaDbContext CreateViphaContext(string csName)
+    {
+        var cs = _config.GetConnectionString(csName)
+                 ?? throw new InvalidOperationException($"Connection string '{csName}' not found.");
+        var opts = new DbContextOptionsBuilder<ViphaDbContext>().UseSqlServer(cs).Options;
+        return new ViphaDbContext(opts);
+    }
 }

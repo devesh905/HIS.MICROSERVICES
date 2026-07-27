@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabReportService", "LabRepo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeAuthService", "EmployeeAuthService\EmployeeAuthService.csproj", "{2F86786B-7212-4DEF-B415-3C17D62328CA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IpdService", "IpdService\IpdService.csproj", "{866284CE-4670-4DC4-9172-069AC5DE3066}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -89,6 +91,18 @@ Global
 		{2F86786B-7212-4DEF-B415-3C17D62328CA}.Release|x64.Build.0 = Release|Any CPU
 		{2F86786B-7212-4DEF-B415-3C17D62328CA}.Release|x86.ActiveCfg = Release|Any CPU
 		{2F86786B-7212-4DEF-B415-3C17D62328CA}.Release|x86.Build.0 = Release|Any CPU
+		{866284CE-4670-4DC4-9172-069AC5DE3066}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{866284CE-4670-4DC4-9172-069AC5DE3066}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{866284CE-4670-4DC4-9172-069AC5DE3066}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{866284CE-4670-4DC4-9172-069AC5DE3066}.Debug|x64.Build.0 = Debug|Any CPU
+		{866284CE-4670-4DC4-9172-069AC5DE3066}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{866284CE-4670-4DC4-9172-069AC5DE3066}.Debug|x86.Build.0 = Debug|Any CPU
+		{866284CE-4670-4DC4-9172-069AC5DE3066}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{866284CE-4670-4DC4-9172-069AC5DE3066}.Release|Any CPU.Build.0 = Release|Any CPU
+		{866284CE-4670-4DC4-9172-069AC5DE3066}.Release|x64.ActiveCfg = Release|Any CPU
+		{866284CE-4670-4DC4-9172-069AC5DE3066}.Release|x64.Build.0 = Release|Any CPU
+		{866284CE-4670-4DC4-9172-069AC5DE3066}.Release|x86.ActiveCfg = Release|Any CPU
+		{866284CE-4670-4DC4-9172-069AC5DE3066}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -99,6 +113,7 @@ Global
 		{7364DB1E-407A-446D-822F-CFA1934A7810} = {D8F85806-E508-4374-9423-C0CA37016C2D}
 		{8C9B2964-EC82-4A37-804A-0DB618CC447F} = {D8F85806-E508-4374-9423-C0CA37016C2D}
 		{2F86786B-7212-4DEF-B415-3C17D62328CA} = {D8F85806-E508-4374-9423-C0CA37016C2D}
+		{866284CE-4670-4DC4-9172-069AC5DE3066} = {D8F85806-E508-4374-9423-C0CA37016C2D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2BA369CC-D5DF-459D-9341-1F5C4EC6B2B9}
