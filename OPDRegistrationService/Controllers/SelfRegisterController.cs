@@ -16,7 +16,7 @@ public class SelfRegisterController : ControllerBase
     private readonly ILogger<SelfRegisterController> _logger;
     private readonly IJwtService _jwt;
 
-    private const short FinYr = 0;
+    private const short FinYr = 0;  
     private const int SponsorId = 33;
     private const int VerticalId = 9;   
     private const string OpdType = "GENERAL";
