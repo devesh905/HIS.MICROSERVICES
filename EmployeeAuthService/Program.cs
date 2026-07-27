@@ -20,6 +20,8 @@ builder.Services.AddDbContext<PortalDbContext>(opt =>
 // Custom services
 builder.Services.AddScoped<IHospitalQueryService, HospitalQueryService>();
 builder.Services.AddScoped<IOtpService, OtpService>();
+
+builder.Services.AddScoped<Shared.Authentication.JwtTokenFactory>();
 builder.Services.AddScoped<IJwtService, JwtService>();
 builder.Services.AddScoped<ISmsService, AirtelSmsService>();
 builder.Services.AddScoped<ILoginActivityService, LoginActivityService>();
