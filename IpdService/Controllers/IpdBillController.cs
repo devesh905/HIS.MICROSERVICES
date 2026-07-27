@@ -1,6 +1,6 @@
 ﻿using IpdService.Data;
 using IpdService.Models.DTOs;
-using IpdService.Models.Entities.Hms;
+using IpdService.Models.Entities.ViphaHms;
 using IpdService.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

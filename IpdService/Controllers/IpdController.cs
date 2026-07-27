@@ -161,7 +161,7 @@ public class IpdController : ControllerBase
     // Private helpers
 
     private static async Task<Dictionary<string, DischargeReqLookup>> LoadDischargeLookupsAsync(
-    HisDbContext ctx, IEnumerable<IpdRegistration> admissions)
+    HmsDbContext ctx, IEnumerable<IpdRegistration> admissions)
     {
         var admNos = admissions
             .Where(a => !string.IsNullOrEmpty(a.Adm_No))
@@ -203,7 +203,7 @@ public class IpdController : ControllerBase
     }
 
     private static async Task<(Dictionary<int, DoctorLookup> doctors, Dictionary<int, SponsorLookup> sponsors)>
-        LoadLookupsAsync(HisDbContext ctx, IEnumerable<IpdRegistration> admissions)
+        LoadLookupsAsync(HmsDbContext ctx, IEnumerable<IpdRegistration> admissions)
     {
         var admList = admissions.ToList();
 
