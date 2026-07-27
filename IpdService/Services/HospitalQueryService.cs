@@ -9,12 +9,12 @@ public class HospitalQueryService : IHospitalQueryService
 
     public HospitalQueryService(IConfiguration config) => _config = config;
 
-    public HisDbContext CreateHisContext(string csName)
+    public HmsDbContext CreateHisContext(string csName)
     {
         var cs = _config.GetConnectionString(csName)
                  ?? throw new InvalidOperationException($"Connection string '{csName}' not found.");
-        var opts = new DbContextOptionsBuilder<HisDbContext>().UseSqlServer(cs).Options;
-        return new HisDbContext(opts);
+        var opts = new DbContextOptionsBuilder<HmsDbContext>().UseSqlServer(cs).Options;
+        return new HmsDbContext(opts);
     }
 
     public LisDbContext CreateLisContext(string csName) { /* same pattern */ }
