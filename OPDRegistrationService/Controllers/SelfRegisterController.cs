@@ -53,7 +53,7 @@ public class SelfRegisterController : ControllerBase
         var patientName = $"{req.PatientFirstName} {req.PatientLastName}".Trim();
         var orgId = 2;
 
-        await using var ctx = _hospitals.CreateHisContext(entry.HisCs);
+        await using var ctx = _hospitals.CreateHmsContext(entry.HisCs);
 
         var fee = await ctx.VerticalDepartmentFeeDets
             .Where(v => v.DeptId == req.DepId
@@ -290,7 +290,7 @@ public class SelfRegisterController : ControllerBase
             return BadRequest(new { message = "Department selection is required." });
 
         // Prevent registering twice if they refresh and resubmit
-        await using var checkCtx = _hospitals.CreateHisContext(entry.HisCs);
+        await using var checkCtx = _hospitals.CreateHmsContext(entry.HisCs);
         var alreadyExists = await checkCtx.PatientRegistrations
             .AnyAsync(p => p.MobileNo == mobile);
         if (alreadyExists)
@@ -309,7 +309,7 @@ public class SelfRegisterController : ControllerBase
         var verticalId = req.VerticalId > 0 ? req.VerticalId : 1;
         const string opdType = "GENERAL";
 
-        await using var ctx = _hospitals.CreateHisContext(entry.HisCs);
+        await using var ctx = _hospitals.CreateHmsContext(entry.HisCs);
 
         var fee = await ctx.VerticalDepartmentFeeDets
             .Where(v => v.DeptId == req.DepId
@@ -485,7 +485,7 @@ public class SelfRegisterController : ControllerBase
             var opNo = pOpNo.Value?.ToString() ?? "";
 
             // Fetch newly created record and issue real JWT 
-            await using var authCtx = _hospitals.CreateHisContext(entry.HisCs);
+            await using var authCtx = _hospitals.CreateHmsContext(entry.HisCs);
             var newPatient = await authCtx.PatientRegistrations
                 .Where(p => p.UhidNo == newUhid && p.MobileNo == mobile)
                 .OrderBy(p => p.RegistrationDate)
@@ -620,7 +620,7 @@ public class SelfRegisterController : ControllerBase
         if (entry == null) return BadRequest();
 
         var orgId = 2;
-        await using var ctx = _hospitals.CreateHisContext(entry.HisCs);
+        await using var ctx = _hospitals.CreateHmsContext(entry.HisCs);
 
         var fee = await ctx.VerticalDepartmentFeeDets
             .Where(v => v.DeptId == deptId
