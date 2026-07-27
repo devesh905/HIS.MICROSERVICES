@@ -1,6 +1,8 @@
-﻿namespace OPDRegistrationService.Services
+﻿using OPDRegistrationService.Data;
+
+namespace OPDRegistrationService.Services;
+
+public interface IHospitalQueryService
 {
-    public class IHospitalQueryService
-    {
-    }
+    HmsDbContext CreateHmsContext(string connectionStringName);
 }
