@@ -44,7 +44,7 @@ public class BillDto
     public string? DepartmentName { get; set; }
     public string? SponsorName { get; set; }
     public string? BillSource { get; set; }
-    public string? Address { get; set; }          // NEW
-    public string? ReceivedByName { get; set; }    // NEW
+    public string? Address { get; set; }          
+    public string? ReceivedByName { get; set; }   
     public List<BillDetailItemDto> Items { get; set; } = new();
 }
