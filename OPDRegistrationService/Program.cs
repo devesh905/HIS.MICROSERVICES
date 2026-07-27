@@ -11,6 +11,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IHospitalQueryService, HospitalQueryService>();
 
+builder.Services.AddScoped<IJwtService, JwtService>();
+builder.Services.AddScoped<Shared.Authentication.JwtTokenFactory>();
 builder.Services.AddSharedJwtAuthentication(builder.Configuration);
 
 builder.Services.AddCors(opt =>
