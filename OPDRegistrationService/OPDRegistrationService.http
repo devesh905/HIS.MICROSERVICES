@@ -1,0 +1,6 @@
+@OPDRegistrationService_HostAddress = http://localhost:5190
+
+GET {{OPDRegistrationService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
