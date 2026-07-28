@@ -1,14 +1,13 @@
-﻿using HIS.API.Data;
-using HIS.API.Models.DTOs;
-using HIS.API.Models.DTOs.Portal;
-using HIS.API.Models.Entities.Hms;
-using HIS.API.Models.Entities.Portal;
-using HIS.API.Services;
+﻿using HealthCampMicroservice.Data;
+using HealthCampMicroservice.Models.DTOs;
+using HealthCampMicroservice.Models.Entities.Hms;
+using HealthCampMicroservice.Models.Entities.PatientPortal;
+using HealthCampMicroservice.Services;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
 
-namespace HIS.API.Services;
+namespace HealthCampService.Services;
 
 public class HealthCampService : IHealthCampService
 {

@@ -2,7 +2,6 @@
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using HealthCampMicroservice.Data;
-using HealthCampMicroservice.Models.Entities.Portal;
 using HealthCampMicroservice.Services;
 
 namespace HealthCampService.BackgroundJobs;
