@@ -1,3 +1,4 @@
+using HealthCampService.BackgroundJobs;
 using HealthCampService.Data;
 using HealthCampService.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -13,12 +14,19 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddMemoryCache();
 
-// DbContexts — PortalDbContext ek fixed connection string use karta hai
 builder.Services.AddDbContext<PortalDbContext>(opt =>
-    opt.UseSqlServer(builder.Configuration.GetConnectionString("PatientPortalDb")));
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("PortalDb")));
 
-// Custom services
 builder.Services.AddScoped<IHospitalQueryService, HospitalQueryService>();
+builder.Services.AddScoped<IHealthCampService, HealthCampBookingService>();
+builder.Services.AddScoped<HealthCampProcessingJob>();
+builder.Services.AddHostedService<HealthCampProcessingHostedService>();
+
+builder.Services.AddHttpClient<IDoctorScheduleClient, DoctorScheduleClient>(client =>
+{
+    // TODO: set once DoctorScheduleService exists, e.g. via Gateway or direct address
+    client.BaseAddress = new Uri(builder.Configuration["Services:DoctorSchedule:BaseUrl"] ?? "http://localhost:5000");
+});
 
 builder.Services.AddScoped<Shared.Authentication.JwtTokenFactory>();
 // JWT auth

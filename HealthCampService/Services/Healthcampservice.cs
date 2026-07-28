@@ -9,10 +9,10 @@ using System.Text.Json;
 
 namespace HealthCampService.Services;
 
-public class HealthCampService : IHealthCampService
+public class HealthCampBookingService : IHealthCampService
 {
     private readonly PortalDbContext _db;
-    private readonly ILogger<HealthCampService> _logger;
+    private readonly ILogger<HealthCampBookingService> _logger;
     private readonly IHospitalQueryService _hospitals;
 
     private static readonly JsonSerializerOptions JsonOpts = new()
@@ -20,7 +20,7 @@ public class HealthCampService : IHealthCampService
         PropertyNamingPolicy = JsonNamingPolicy.CamelCase
     };
 
-    public HealthCampService(PortalDbContext db, ILogger<HealthCampService> logger, IHospitalQueryService hospitals)
+    public HealthCampBookingService(PortalDbContext db, ILogger<HealthCampBookingService> logger, IHospitalQueryService hospitals)
     {
         _db = db;
         _logger = logger;
