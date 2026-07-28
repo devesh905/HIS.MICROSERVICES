@@ -1,4 +1,4 @@
-﻿using HealthCampMicroservice.Models.Entities.Portal;
+﻿using HealthCampService.Models.Entities.PatientPortal;
 using Microsoft.EntityFrameworkCore;
 
 namespace HealthCampMicroservice.Data;
