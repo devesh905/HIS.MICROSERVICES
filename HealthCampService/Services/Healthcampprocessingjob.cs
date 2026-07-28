@@ -1,8 +1,9 @@
 ﻿using System.Data;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
-using HealthCampMicroservice.Data;
+using HealthCampService.Data;
 using HealthCampService.Services;
+using HealthCampService.Models.Entities.PatientPortal;
 
 namespace HealthCampService.BackgroundJobs;
 
@@ -11,7 +12,7 @@ public class HealthCampProcessingJob
     private readonly PortalDbContext _portalDb;
     private readonly IHospitalQueryService _hospitals;
     private readonly ILogger<HealthCampProcessingJob> _logger;
-    private readonly IDoctorScheduleService _doctorSchedule;
+    private readonly IDoctorScheduleClient _doctorSchedule;
 
     private const int TmtServiceId = 2347;
     private const string TmtServiceTyp = "C";        /// "create new OpNo + Patient_Consultancy" branch
@@ -25,7 +26,7 @@ public class HealthCampProcessingJob
         PortalDbContext portalDb,
         IHospitalQueryService hospitals,
         ILogger<HealthCampProcessingJob> logger,
-        IDoctorScheduleService doctorSchedule)
+        IDoctorScheduleClient doctorSchedule)
     {
         _portalDb = portalDb;
         _hospitals = hospitals;
