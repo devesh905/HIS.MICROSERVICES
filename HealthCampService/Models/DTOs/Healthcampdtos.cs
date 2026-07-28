@@ -1,6 +1,5 @@
 ﻿namespace HealthCampService.Models.DTOs;
 
-// Camp Type
 public class HealthCampTypeDto
 {
     public int Id { get; set; }
@@ -16,7 +15,6 @@ public class HealthCampTypeDto
     public int? DefaultDepartmentId { get; set; }
 }
 
-// Slot availability (for calendar / slot picker UI)
 public class SlotAvailabilityDto
 {
     public int SlotId { get; set; }
@@ -61,7 +59,6 @@ public class NewRegistrationPayload
     public string? PinCode { get; set; }
 }
 
-// Create booking request
 public class CreateBookingRequest
 {
     public string HospitalKey { get; set; } = string.Empty;
@@ -95,7 +92,6 @@ public class CreateBookingRequest
     public string? Department { get; set; } // free-text, e.g. employee's own dept
 }
 
-// Booking response
 public class BookingResultDto
 {
     public bool Success { get; set; }
@@ -108,7 +104,6 @@ public class BookingResultDto
     public TimeSpan? EndTime { get; set; }
 }
 
-// Admin: create slot(s) request
 public class CreateSlotRequest
 {
     public string HospitalKey { get; set; } = string.Empty;
@@ -119,7 +114,6 @@ public class CreateSlotRequest
     public int Capacity { get; set; }
 }
 
-// Booking list item (admin / reception view)
 public class BookingListItemDto
 {
     public int BookingId { get; set; }
