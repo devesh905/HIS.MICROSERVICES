@@ -1,0 +1,78 @@
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace HealthCampMicroservice.Models.Entities.Hms;
+
+[Table("Opd_Billing_Mas", Schema = "dbo")]
+public class OpdBillingMas
+{
+    [Key]
+    public long Id { get; set; }
+    public string? AppNo { get; set; }
+    public string? BillNo { get; set; }
+    public DateTime? Bill_Date { get; set; }
+    public string? Timein { get; set; }
+    public string? UhidNo { get; set; }
+    public string? OpNo { get; set; }
+    public int? VisitNo { get; set; }
+    public int? QueueNo { get; set; }
+    public int? DocId { get; set; }
+    public int? SponsId { get; set; }
+    public string? OpdType { get; set; }
+    public int? DepId { get; set; }
+    public string? Card_no { get; set; }
+    public string? ClaimId { get; set; }
+    public int? RefId { get; set; }
+    public bool? Cash { get; set; }
+    public bool? Credit { get; set; }
+    public bool? Free { get; set; }
+    public string? ISCredit { get; set; }
+    public string? A_Status { get; set; }
+    public int? LocId { get; set; }
+    public string? PayMode { get; set; }
+    public int? AccId { get; set; }
+    public string? ChequeNo { get; set; }
+    public string? Auth_code { get; set; }
+    public int? Qty { get; set; }
+    public decimal? TotalAmt { get; set; }
+    public decimal? Ser_Cons { get; set; }
+    public decimal? NetAmount { get; set; }
+    public decimal? Con_Amount { get; set; }
+    public decimal? Receipt_Amount1 { get; set; }
+    public string? PayMode2 { get; set; }
+    public int? AccountId2 { get; set; }
+    public string? ChequeNo2 { get; set; }
+    public string? Auth_Code2 { get; set; }
+    public decimal? Receipt_Amount2 { get; set; }
+    public decimal? Receipt_Amount { get; set; }
+    public decimal? Balance { get; set; }
+    public int? CanUserId { get; set; }
+    public DateTime? Canc_Time { get; set; }
+    public string? Canc_Pc { get; set; }
+    public string? Remarks { get; set; }
+    public long? OrgId { get; set; }
+    public int? FinYr { get; set; }
+    public int? UserId { get; set; }
+    public string? SystemName { get; set; }
+    public DateTime? CreatedAt { get; set; }
+    public int? CreatedBy { get; set; }
+    public int? LastModifiedby { get; set; }
+    public DateTime? LastModifiedDate { get; set; }
+    public decimal? Round_off { get; set; }
+    public string? OpNo1 { get; set; }
+    public string? OpdReqNo { get; set; }
+    public int? Ac_Jr_Id { get; set; }
+    public int? VerticalId { get; set; }
+    public DateTime? DateOfBirth { get; set; }
+    public short? AgeInDays { get; set; }
+    public short? AgeInMonths { get; set; }
+    public short? AgeInYears { get; set; }
+    public bool? AccountPosting { get; set; }
+    public bool? OutSourced { get; set; }
+    public int? OSAccountId { get; set; }
+    public decimal? TDSAmount { get; set; }
+    public string? Indent_No { get; set; }
+    public bool? IsCancel { get; set; }
+    public string? CancelRemarks { get; set; }
+    public decimal? GSTAmount { get; set; }
+}
