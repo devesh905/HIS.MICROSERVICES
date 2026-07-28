@@ -21,8 +21,4 @@
 	  <ProjectReference Include="..\Shared.Authentication\Shared.Authentication.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 </Project>
