@@ -2,12 +2,12 @@
 
 public static class HospitalRegistry
 {
-    public record HospitalEntry(string Key, string Name, string HisCs);
+    public record HospitalEntry(string Key, string Name, string HisCs , string ViphaCs);
 
     public static readonly IReadOnlyList<HospitalEntry> All =
     [
-        new("MRT", "Meerut",   "HMSDb_MRT"),
-        new("DDN", "Dehradun", "HMSDb_Ddn"),
+        new("MRT", "Meerut",   "HMSDb_MRT", "ViphaDb_MRT"),
+        new("DDN", "Dehradun", "HMSDb_Ddn", "ViphaDb_Ddn"),
     ];
 
     public static HospitalEntry? Find(string key) =>
