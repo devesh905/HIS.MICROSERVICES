@@ -1,7 +1,7 @@
-﻿using HealthCampMicroservice.Models.Entities.Lis;
+﻿using HealthCampService.Models.Entities.Lis;
 using Microsoft.EntityFrameworkCore;
 
-namespace HealthCampMicroservice.Data;
+namespace HealthCampService.Data;
 
 public class LisDbContext : DbContext
 {

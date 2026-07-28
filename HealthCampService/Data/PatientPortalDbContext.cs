@@ -1,7 +1,7 @@
 ﻿using HealthCampService.Models.Entities.PatientPortal;
 using Microsoft.EntityFrameworkCore;
 
-namespace HealthCampMicroservice.Data;
+namespace HealthCampService.Data;
 
 public class PortalDbContext : DbContext
 {

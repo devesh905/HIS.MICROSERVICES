@@ -1,7 +1,7 @@
-﻿using HealthCampMicroservice.Models.Entities.Vipha;
+﻿using HealthCampService.Models.Entities.Vipha;
 using Microsoft.EntityFrameworkCore;
 
-namespace HealthCampMicroservice.Data;
+namespace HealthCampService.Data;
 
 public class ViphaDbContext : DbContext
 {
