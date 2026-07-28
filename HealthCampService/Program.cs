@@ -1,6 +1,5 @@
 using HealthCampService.Data;
 using HealthCampService.Services;
-using HealthCampMicroservice.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
@@ -20,13 +19,8 @@ builder.Services.AddDbContext<PortalDbContext>(opt =>
 
 // Custom services
 builder.Services.AddScoped<IHospitalQueryService, HospitalQueryService>();
-builder.Services.AddScoped<IOtpService, OtpService>();
 
 builder.Services.AddScoped<Shared.Authentication.JwtTokenFactory>();
-builder.Services.AddScoped<IJwtService, JwtService>();
-builder.Services.AddScoped<ISmsService, AirtelSmsService>();
-builder.Services.AddScoped<ILoginActivityService, LoginActivityService>();
-
 // JWT auth
 var jwtKey = builder.Configuration["Jwt:Key"]!;
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
