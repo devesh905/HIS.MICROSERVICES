@@ -1,7 +1,7 @@
-﻿using HealthCampMicroservice.Models.Entities.Hms;
+﻿using HealthCampService.Models.Entities.Hms;
 using Microsoft.EntityFrameworkCore;
 
-namespace HealthCampMicroservice.Data;
+namespace HealthCampService.Data;
 
 public class HmsDbContext : DbContext
 {

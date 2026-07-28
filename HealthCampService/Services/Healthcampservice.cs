@@ -1,8 +1,8 @@
-﻿using HealthCampMicroservice.Data;
-using HealthCampMicroservice.Models.DTOs;
-using HealthCampMicroservice.Models.Entities.Hms;
-using HealthCampMicroservice.Models.Entities.PatientPortal;
-using HealthCampMicroservice.Services;
+﻿using HealthCampService.Data;
+using HealthCampService.Models.DTOs;
+using HealthCampService.Models.Entities.Hms;
+using HealthCampService.Models.Entities.PatientPortal;
+using HealthCampService.Services;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;

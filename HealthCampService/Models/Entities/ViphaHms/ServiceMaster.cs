@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace HealthCampMicroservice.Models.Entities.Hms;
+namespace HealthCampService.Models.Entities.Hms;
 
 [Table("Service_Master", Schema = "dbo")]
 public class ServiceMaster

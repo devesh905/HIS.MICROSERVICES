@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace HealthCampMicroservice.Models.Entities.Vipha;
+namespace HealthCampService.Models.Entities.Vipha;
 
 [Table("Users", Schema = "dbo")]
 public class User

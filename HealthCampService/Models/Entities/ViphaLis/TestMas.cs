@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace HealthCampMicroservice.Models.Entities.Lis;
+namespace HealthCampService.Models.Entities.Lis;
 
 [Table("Test_Mas")]
 public class TestMas
