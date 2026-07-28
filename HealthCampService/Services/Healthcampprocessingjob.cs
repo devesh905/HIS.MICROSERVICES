@@ -5,7 +5,7 @@ using HealthCampMicroservice.Data;
 using HealthCampMicroservice.Models.Entities.Portal;
 using HealthCampMicroservice.Services;
 
-namespace HealthCampMicroservice.BackgroundJobs;
+namespace HealthCampService.BackgroundJobs;
 
 public class HealthCampProcessingJob
 {
