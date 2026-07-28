@@ -16,4 +16,12 @@ public class HospitalQueryService : IHospitalQueryService
         var opts = new DbContextOptionsBuilder<HmsDbContext>().UseSqlServer(cs).Options;
         return new HmsDbContext(opts);
     }
+
+    public ViphaDbContext CreateViphaContext(string csName)
+    {
+        var cs = _config.GetConnectionString(csName)
+                 ?? throw new InvalidOperationException($"Connection string '{csName}' not found.");
+        var opts = new DbContextOptionsBuilder<ViphaDbContext>().UseSqlServer(cs).Options;
+        return new ViphaDbContext(opts);
+    }
 }
