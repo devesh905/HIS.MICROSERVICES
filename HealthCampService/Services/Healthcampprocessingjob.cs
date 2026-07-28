@@ -1,11 +1,11 @@
 ﻿using System.Data;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
-using HealthCampService.Data;
-using HealthCampService.Models.Entities.Portal;
-using HealthCampService.Services;
+using HealthCampMicroservice.Data;
+using HealthCampMicroservice.Models.Entities.Portal;
+using HealthCampMicroservice.Services;
 
-namespace HealthCampService.BackgroundJobs;
+namespace HealthCampMicroservice.BackgroundJobs;
 
 public class HealthCampProcessingJob
 {
