@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace HealthCampMicroservice.Models.Entities.Hms;
+namespace HealthCampService.Models.Entities.Hms;
 
 [Table("Opd_Billing_Mas", Schema = "dbo")]
 public class OpdBillingMas

@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-namespace HealthCampMicroservice.Models.Entities.Hms;
+namespace HealthCampService.Models.Entities.Hms;
 
 [Table("Opd_Billing_Det", Schema = "dbo")]
 [PrimaryKey(nameof(Id), nameof(Sno))]   // composite key — THIS is the fix

@@ -2,7 +2,7 @@
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using HealthCampMicroservice.Data;
-using HealthCampMicroservice.Services;
+using HealthCampService.Services;
 
 namespace HealthCampService.BackgroundJobs;
 
