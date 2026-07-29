@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientAuthService", "Patie
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{D8F85806-E508-4374-9423-C0CA37016C2D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateway", "Gateway", "{3953C760-0AD6-4873-B34B-BB9FC6B14712}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{7CCDF744-4F05-4B78-8890-72562B220B02}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabReportService", "LabReportService\LabReportService.csproj", "{8C9B2964-EC82-4A37-804A-0DB618CC447F}"
@@ -26,6 +24,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthCampService", "HealthCampService\HealthCampService.csproj", "{CA11E97C-1118-41BA-9305-281796DC29B1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiService", "AiService\AiService.csproj", "{045C3866-0E18-4D57-B834-D194DE3FD9AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gateway", "Gateway\Gateway.csproj", "{C2637985-65AF-44CA-B64E-F2027C7231A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -145,6 +145,18 @@ Global
 		{045C3866-0E18-4D57-B834-D194DE3FD9AF}.Release|x64.Build.0 = Release|Any CPU
 		{045C3866-0E18-4D57-B834-D194DE3FD9AF}.Release|x86.ActiveCfg = Release|Any CPU
 		{045C3866-0E18-4D57-B834-D194DE3FD9AF}.Release|x86.Build.0 = Release|Any CPU
+		{C2637985-65AF-44CA-B64E-F2027C7231A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2637985-65AF-44CA-B64E-F2027C7231A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2637985-65AF-44CA-B64E-F2027C7231A5}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C2637985-65AF-44CA-B64E-F2027C7231A5}.Debug|x64.Build.0 = Debug|Any CPU
+		{C2637985-65AF-44CA-B64E-F2027C7231A5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C2637985-65AF-44CA-B64E-F2027C7231A5}.Debug|x86.Build.0 = Debug|Any CPU
+		{C2637985-65AF-44CA-B64E-F2027C7231A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2637985-65AF-44CA-B64E-F2027C7231A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2637985-65AF-44CA-B64E-F2027C7231A5}.Release|x64.ActiveCfg = Release|Any CPU
+		{C2637985-65AF-44CA-B64E-F2027C7231A5}.Release|x64.Build.0 = Release|Any CPU
+		{C2637985-65AF-44CA-B64E-F2027C7231A5}.Release|x86.ActiveCfg = Release|Any CPU
+		{C2637985-65AF-44CA-B64E-F2027C7231A5}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
