@@ -6,8 +6,8 @@ public static class HospitalRegistry
 
     public static readonly IReadOnlyList<HospitalEntry> All =
     [
-        new("MRT", "Meerut",   "HmsDb_MRT",  "LisDb_MRT", "ViphaDb_MRT"),
-        new("DDN", "Dehradun", "HmsDb_Ddn", "LisDb_Ddn", "ViphaDb_Ddn"),
+        new("MRT", "Meerut",   "HMSDb_MRT",  "LISDb_MRT", "ViphaDb_MRT"),
+        new("DDN", "Dehradun", "HMSDb_Ddn", "LISDb_Ddn", "ViphaDb_Ddn"),
     ];
 
     public static HospitalEntry? Find(string key) => All.FirstOrDefault(h => h.Key == key);
