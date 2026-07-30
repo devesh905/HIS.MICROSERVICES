@@ -45,7 +45,7 @@ public class DoctorScheduleService : IDoctorScheduleService
             return new List<AvailableDoctorDto>();
         }
 
-        await using var hisCtx = _hospitals.CreateHisContext(entry.HisCs);
+        await using var hisCtx = _hospitals.CreateHmsContext(entry.HmsCs);
 
         var doctorIds = rows.Select(r => r.DoctorId).Distinct().ToList();
         var doctorNames = await hisCtx.DoctorMasters
@@ -143,7 +143,7 @@ public class DoctorScheduleService : IDoctorScheduleService
         if (entry == null)
             throw new ArgumentException($"Unknown hospital key: {hospitalKey}");
 
-        await using var hisDb = _hospitals.CreateHisContext(entry.HisCs);
+        await using var hisDb = _hospitals.CreateHmsContext(entry.HmsCs);
 
         var query = _portalDb.DoctorSchedules
             .Where(s => s.HospitalKey == hospitalKey && s.ScheduleMonth == scheduleMonth);
@@ -209,7 +209,7 @@ public class DoctorScheduleService : IDoctorScheduleService
         if (entry == null)
             throw new ArgumentException($"Unknown hospital key: {hospitalKey}");
 
-        await using var hisDb = _hospitals.CreateHisContext(entry.HisCs);
+        await using var hisDb = _hospitals.CreateHmsContext(entry.HmsCs);
         const int orgId = 2;
 
         var doctors = await hisDb.DoctorMasters
