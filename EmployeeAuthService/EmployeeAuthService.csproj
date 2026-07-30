@@ -20,6 +20,8 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
     <PackageReference Include="RestSharp" Version="106.15.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    <PackageReference Include="Azure.Identity" Version="1.11.4" />
+    <PackageReference Include="System.Formats.Asn1" Version="6.0.1" />
 	  <ProjectReference Include="..\Shared.Authentication\Shared.Authentication.csproj" />
   </ItemGroup>
 
