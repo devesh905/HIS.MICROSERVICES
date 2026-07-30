@@ -104,7 +104,6 @@ public class OpdMetaController : ControllerBase
 
     // GET api/opdmeta/fee?hospitalKey=MRT&deptId=5&sponsorId=10&verticalId=1&opdType=GENERAL
     [HttpGet("fee")]
-    [AllowAnonymous]
     public async Task<IActionResult> GetFee(
         [FromQuery] string hospitalKey,
         [FromQuery] int deptId,

@@ -1,7 +1,10 @@
-using OPDRegistrationService.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using OPDRegistrationService.Services;
 using Shared.Authentication;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
