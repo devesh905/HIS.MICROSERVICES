@@ -1,6 +1,6 @@
 ﻿using DoctorScheduleService.Data;
 using DoctorScheduleService.Models.DTOs;
-using DoctorScheduleService.Models.Entities.Portal;
+using DoctorScheduleService.Models.Entities.PatientPortal;
 using Microsoft.EntityFrameworkCore;
 
 namespace DoctorScheduleService.Services;
