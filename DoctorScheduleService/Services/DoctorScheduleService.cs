@@ -74,7 +74,7 @@ public class DoctorScheduleService : IDoctorScheduleService
         var entry = HospitalRegistry.Find(hospitalKey);
         if (entry == null) return new List<DoctorScheduleDto>();
 
-        await using var hisCtx = _hospitals.CreateHisContext(entry.HisCs);
+        await using var hisCtx = _hospitals.CreateHmsContext(entry.HmsCs);
 
         var doctorIds = rows.Select(r => r.DoctorId).Distinct().ToList();
         var deptIds = rows.Select(r => r.DepartmentId).Distinct().ToList();
