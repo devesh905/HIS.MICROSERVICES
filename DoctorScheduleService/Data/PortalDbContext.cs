@@ -21,5 +21,6 @@ public class PortalDbContext : DbContext
             e.HasIndex(x => new { x.HospitalKey, x.DoctorId, x.ScheduleMonth })
              .HasDatabaseName("IX_DoctorSchedule_ByDoctor");
         });
+
     }
 }
