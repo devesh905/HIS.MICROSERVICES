@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using PatientAuthService.Models.Entities.Hms;
 using PatientAuthService.Models.Entities.ViphaHms;
 
 namespace PatientAuthService.Data;
@@ -9,6 +10,8 @@ public class AuthDbContext : DbContext
 
     public DbSet<PatientRegistration> PatientRegistrations => Set<PatientRegistration>();
     public DbSet<PatientConsultancy> PatientConsultancies => Set<PatientConsultancy>();
+    public DbSet<DoctorMaster> DoctorMasters => Set<DoctorMaster>();
+    public DbSet<SponsorMaster> SponsorMasters => Set<SponsorMaster>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -21,5 +24,15 @@ public class AuthDbContext : DbContext
             .ToTable("Patient_Consultancy", schema: "dbo");
         modelBuilder.Entity<PatientConsultancy>()
             .HasIndex(c => c.UhidNo);
+
+        modelBuilder.Entity<SponsorMaster>()
+    .ToTable("Sponsor_Master", schema: "dbo");
+
+        modelBuilder.Entity<DoctorMaster>()
+    .ToTable("Doctor_Master", schema: "dbo");
+        modelBuilder.Entity<DoctorMaster>()
+            .HasIndex(d => d.MobileNo);
+
+
     }
 }
