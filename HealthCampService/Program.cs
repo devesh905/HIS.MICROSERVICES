@@ -27,7 +27,7 @@ builder.Services.AddHostedService<HealthCampProcessingHostedService>();
 builder.Services.AddHttpClient<IDoctorScheduleClient, DoctorScheduleClient>(client =>
 {
     // TODO: set once DoctorScheduleService exists, e.g. via Gateway or direct address
-    client.BaseAddress = new Uri(builder.Configuration["Services:DoctorSchedule:BaseUrl"] ?? "http://localhost:5000");
+  client.BaseAddress = new Uri("http://localhost:5151/api/DoctorSchedule");
 });
 
 builder.Services.AddSharedJwtAuthentication(builder.Configuration);
