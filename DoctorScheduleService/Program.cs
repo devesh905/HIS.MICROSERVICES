@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Shared.Authentication;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,7 +21,9 @@ builder.Services.AddDbContext<PortalDbContext>(opt =>
 
 // Custom services
 builder.Services.AddScoped<IHospitalQueryService, HospitalQueryService>();
-builder.Services.AddScoped<Shared.Authentication.JwtTokenFactory>();
+builder.Services.AddScoped<IDoctorScheduleService, DoctorScheduleService.Services.DoctorScheduleService>();
+builder.Services.AddScoped<JwtTokenFactory>();
+builder.Services.AddSharedJwtAuthentication(builder.Configuration);
 
 builder.Services.AddSwaggerGen(options =>
 {
