@@ -1,4 +1,4 @@
-﻿using HealthCampService.Models.Entities.PatientPortal;
+using HealthCampService.Models.Entities.PatientPortal;
 using Microsoft.EntityFrameworkCore;
 
 namespace HealthCampService.Data;
@@ -20,14 +20,14 @@ public class PortalDbContext : DbContext
             .ToTable("HealthCampSlot");
         modelBuilder.Entity<HealthCampSlot>()
             .HasOne(s => s.CampType)
-            .WithMany()
+            .WithMany(t => t.Slots)
             .HasForeignKey(s => s.CampTypeId);
 
         modelBuilder.Entity<HealthCampBooking>()
             .ToTable("HealthCampBooking");
         modelBuilder.Entity<HealthCampBooking>()
             .HasOne(b => b.Slot)
-            .WithMany()
+            .WithMany(s => s.Bookings)
             .HasForeignKey(b => b.SlotId);
         modelBuilder.Entity<HealthCampBooking>()
             .HasIndex(b => new { b.HospitalKey, b.BookingRefNo });
