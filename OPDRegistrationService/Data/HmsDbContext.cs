@@ -1,4 +1,4 @@
-﻿using OPDRegistrationService.Models.Entities.Hms;
+using OPDRegistrationService.Models.Entities.Hms;
 using Microsoft.EntityFrameworkCore;
 
 namespace OPDRegistrationService.Data;
@@ -47,7 +47,7 @@ public class HmsDbContext : DbContext
 
 
         modelBuilder.Entity<OpdType>()
-            .ToTable("OpdType", schema: "dbo");
+            .ToTable("Opd_Type", schema: "dbo");
 
         modelBuilder.Entity<TitleMaster>()
          .ToTable("Title_Master", schema: "dbo")
