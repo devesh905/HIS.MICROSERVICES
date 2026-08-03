@@ -30,6 +30,12 @@ builder.Services.AddHttpClient<IDoctorScheduleClient, DoctorScheduleClient>(clie
   client.BaseAddress = new Uri("http://localhost:5151/api/DoctorSchedule");
 });
 
+builder.Services.AddHttpClient<IEmployeeVerificationService, EmployeeVerificationService>(client =>
+{
+    client.BaseAddress = new Uri("http://apiairtel.subharti.org");
+    client.Timeout = TimeSpan.FromSeconds(8);
+});
+
 builder.Services.AddSharedJwtAuthentication(builder.Configuration);
 
 builder.Services.AddSwaggerGen(options =>
