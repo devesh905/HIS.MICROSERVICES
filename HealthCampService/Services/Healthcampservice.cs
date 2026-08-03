@@ -14,17 +14,19 @@ public class HealthCampBookingService : IHealthCampService
     private readonly PortalDbContext _db;
     private readonly ILogger<HealthCampBookingService> _logger;
     private readonly IHospitalQueryService _hospitals;
+    private readonly IEmployeeVerificationService _employeeVerification;
 
     private static readonly JsonSerializerOptions JsonOpts = new()
     {
         PropertyNamingPolicy = JsonNamingPolicy.CamelCase
     };
 
-    public HealthCampBookingService(PortalDbContext db, ILogger<HealthCampBookingService> logger, IHospitalQueryService hospitals)
+    public HealthCampBookingService(PortalDbContext db, ILogger<HealthCampBookingService> logger, IHospitalQueryService hospitals, IEmployeeVerificationService employeeVerification)
     {
         _db = db;
         _logger = logger;
         _hospitals = hospitals;
+        _employeeVerification = employeeVerification;
     }
 
     public async Task<List<HealthCampTypeDto>> GetActiveCampTypesAsync(string hospitalKey)
@@ -98,6 +100,12 @@ public class HealthCampBookingService : IHealthCampService
         if (request.IsNewRegistration && request.NewRegistration == null)
         {
             return Fail("Registration details are required for a new patient.");
+        }
+
+        var verification = await _employeeVerification.VerifyByMobileAsync(request.MobileNo);
+        if (!verification.IsEmployee)
+        {
+            return Fail("This service is available only for hospital staff. Please contact reception if you believe this is an error.");
         }
 
         // Resolve doctor/department: explicit request wins, else fall back to camp type defaults
