@@ -12,11 +12,13 @@ public class HealthCampController : ControllerBase
 {
     private readonly IHealthCampService _service;
     private readonly ILogger<HealthCampController> _logger;
+    private readonly IEmployeeVerificationService _employeeVerification;
 
-    public HealthCampController(IHealthCampService service, ILogger<HealthCampController> logger)
+    public HealthCampController(IHealthCampService service, ILogger<HealthCampController> logger, IEmployeeVerificationService employeeVerification)
     {
         _service = service;
         _logger = logger;
+        _employeeVerification = employeeVerification;
     }
 
     /// Active camp/test types for a hospital (e.g. TMT, ECG) - for dropdown.
@@ -199,6 +201,22 @@ public class HealthCampController : ControllerBase
         {
             return BadRequest(ex.Message);
         }
+    }
+
+    [HttpGet("verify-eligibility")]
+    public async Task<IActionResult> VerifyEligibility([FromQuery] string mobileNo)
+    {
+        if (string.IsNullOrWhiteSpace(mobileNo))
+            return BadRequest("mobileNo is required.");
+
+        var result = await _employeeVerification.VerifyByMobileAsync(mobileNo);
+
+        return Ok(new
+        {
+            eligible = result.IsEmployee,
+            employeeName = result.EmployeeName,
+            designation = result.DesignationName
+        });
     }
 
     private int? GetCurrentUserId()
